@@ -161,6 +161,7 @@
 	   "[concat('microsoft.insights/components/', variables('applicationInsightsName'))]"
          ],
          "properties": {
+	   "BLOB_FUNCTION_GO": "true" 
            "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';EndpointSuffix=', environment().suffixes.storage, ';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-06-01').keys[0].value)]",
            "AzureFunctionsWebHost__hostid": "[concat(variables('functionAppName'), '-hostid')]",
            "AzureWebJobsDisableHomepage": "true",
